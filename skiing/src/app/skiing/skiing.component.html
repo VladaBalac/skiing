@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-12">
+		<app-skiresort [ski]="skiResort"></app-skiresort>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-12">
+		<ngb-tabset [justify]="currentJustify">
+  <ngb-tab title="Tracks">
+    <ng-template ngbTabContent>
+      <app-tracks [t]="track" (javiSort)="sortTrack($event)"></app-tracks>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Weather">
+    <!-- <ng-template ngbTabTitle><b>Fancy</b> title</ng-template> -->
+    <ng-template ngbTabContent>
+    	<div class="row">
+    		<div class="col-1" *ngFor="let i of weather, let a of daniUNedelji">
+    	<app-weather [w]="i" [d]="a"></app-weather>
+    	</div>
+    </div>
+    </ng-template>
+    
+  </ngb-tab>
+  <ngb-tab title="Ski pass">
+    <ng-template ngbTabContent>
+     <app-skipass></app-skipass>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+	</div>
+</div>

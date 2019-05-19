@@ -1,0 +1,14 @@
+<table class="table">
+	<th>
+		<tr>{{d}}</tr>
+	</th>
+	<tr>
+	<td>
+<p><b>{{w.date | date: 'd.M.y'}}</b></p>
+<img src="{{'assets/images/weather/' + w.outlook + '.png'}}" width="100%">
+<p>Min: {{w.temperature_min}}</p>
+<p>Max: {{w.temperature_max}}</p>
+<p>Wind: {{w.wind}}</p>
+</td>
+</tr>
+</table>
