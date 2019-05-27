@@ -73,5 +73,9 @@ reserve(reserve: Reservation){
 	return this.http.post(url + "/" + reserve.mountain_id + "/skipass", reserve)
 }
 
+saveRes(reservation :Reservation){
+	return this.http.post(url + "/" + reservation.mountain_id + "/skipass", reservation);
+}
+
 
 }

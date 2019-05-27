@@ -69,4 +69,13 @@ export class SkiingComponent implements OnInit {
   	this.servis.getTracks(this.skiResort._id, sort).subscribe(res => this.track = res);
   }
 
+  newRes(reservation){
+  	reservation.mountain_id = this.skiResort._id;
+  	this.servis.saveRes(reservation).subscribe(res => {
+  		window.alert("Reservation successful!")
+  	}), err => {
+  		window.alert("Error: " + err);
+  	}
+  }
+
 }

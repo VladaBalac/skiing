@@ -25,7 +25,7 @@
   </ngb-tab>
   <ngb-tab title="Ski pass">
     <ng-template ngbTabContent>
-     <app-skipass></app-skipass>
+     <app-skipass [skiPass]="skipasPrice" (newReservation)="newRes($event)"></app-skipass>
     </ng-template>
   </ngb-tab>
 </ngb-tabset>
